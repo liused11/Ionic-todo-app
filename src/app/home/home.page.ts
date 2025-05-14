@@ -15,7 +15,7 @@ import { RouterLink } from '@angular/router';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   standalone: true,
-  imports: [IonButtons, RouterLink , CommonModule,FormsModule,IonHeader,IonToolbar,IonTitle,IonContent,IonItem,IonInput,IonButton,IonIcon,IonList,IonItemSliding,IonItemOptions,IonItemOption,IonLabel,IonCheckbox]
+  imports: [ CommonModule,FormsModule,IonHeader,IonToolbar,IonTitle,IonContent,IonItem,IonInput,IonButton,IonIcon,IonList,IonItemSliding,IonItemOptions,IonItemOption,IonLabel,IonCheckbox]
 })
 export class HomePage implements OnInit {
   newTask = '';
