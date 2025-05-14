@@ -1,11 +1,4 @@
-<!-- src/app/home/home.page.html -->
-<ion-header [translucent]="true">
-  <ion-toolbar color="primary">
-    <ion-title>
-      Todo List
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
@@ -53,3 +46,9 @@
     </ion-list>
   </div>
 </ion-content>
+
+<ion-buttons slot="end">
+  <ion-button [routerLink]="['/about']">
+    <ion-icon slot="icon-only" name="information-circle-outline"></ion-icon>
+  </ion-button>
+</ion-buttons>

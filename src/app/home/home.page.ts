@@ -1,20 +1,21 @@
-// src/app/home/home.page.ts
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { TodoService } from '../services/todo.service';
 import { Todo } from '../models/todo.model';
-import { AlertController } from '@ionic/angular/standalone';
+import { AlertController, IonButtons } from '@ionic/angular/standalone';
 import { IonHeader, IonToolbar, IonTitle, IonContent, IonItem, IonInput,IonButton,IonIcon,IonList,IonItemSliding,IonItemOptions,IonItemOption,IonLabel,IonCheckbox} from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
-import { add, createOutline, trashOutline } from 'ionicons/icons';
+import { add, createOutline, trashOutline, informationCircleOutline } from 'ionicons/icons';
+import { RouterLink } from '@angular/router';
+
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   standalone: true,
-  imports: [CommonModule,FormsModule,IonHeader,IonToolbar,IonTitle,IonContent,IonItem,IonInput,IonButton,IonIcon,IonList,IonItemSliding,IonItemOptions,IonItemOption,IonLabel,IonCheckbox]
+  imports: [IonButtons, RouterLink , CommonModule,FormsModule,IonHeader,IonToolbar,IonTitle,IonContent,IonItem,IonInput,IonButton,IonIcon,IonList,IonItemSliding,IonItemOptions,IonItemOption,IonLabel,IonCheckbox]
 })
 export class HomePage implements OnInit {
   newTask = '';
@@ -24,7 +25,7 @@ export class HomePage implements OnInit {
     private todoService: TodoService,
     private alertController: AlertController
   ) {
-    addIcons({ add, createOutline, trashOutline });
+    addIcons({add,createOutline,trashOutline,informationCircleOutline});
   }
 
   ngOnInit() {
